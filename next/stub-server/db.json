@@ -4,6 +4,13 @@
       "email": "test@test.com",
       "password": "$2a$10$jVY4StmqtH42RscJ5Y7.Gu9o9zXmxL6T48.1kiEJZXGHigfJQ94GS",
       "id": 1
+    },
+    {
+      "email": "vicruz8@gmail.com",
+      "password": "$2a$10$M/CFI4rLK81Rm9Q3s0yQaeU.EdgYn0Pbm3XJLaQBmIhOKSrgtZiSy",
+      "first_name": "Vicente",
+      "last_name": "Cruz",
+      "id": 2
     }
   ]
 }
