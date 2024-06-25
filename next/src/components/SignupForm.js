@@ -1,6 +1,6 @@
 "use client";
 
-import { signup } from "@/app/lib/actions";
+import { signup } from "@/app/lib/auth/actions";
 import { useFormState, useFormStatus } from "react-dom";
 
 const initialState = {

@@ -33,5 +33,67 @@
       "last_name": "Quiroz",
       "id": 5
     }
+  ],
+  "series": [
+    {
+      "id": 1,
+      "title": "Billions",
+      "streaming_service": "Netflix",
+      "number_of_seasons": 5,
+      "episodes_per_season": 60,
+      "description": "A complex drama about power politics in the world of New York high finance.",
+      "category": "Drama",
+      "image": "https://m.media-amazon.com/images/M/MV5BYTMyZGNjYTUtNzNhYS00MDM0LWJlNjktYTFhMmM3ZjE0ZDMxXkEyXkFqcGdeQXVyOTA3MTMyOTk@._V1_QL75_UX190_CR0,2,190,281_.jpg",
+      "rating": 4.5,
+      "number_of_reviews": 100
+    },
+    {
+      "id": 2,
+      "title": "Breaking Bad",
+      "streaming_service": "Netflix",
+      "number_of_seasons": 5,
+      "episodes_per_season": 62,
+      "description": "A high school chemistry teacher turned meth maker partners with a former student to secure his family's future.",
+      "category": "Drama",
+      "image": "https://m.media-amazon.com/images/M/MV5BMTJiMzgwZTktYzZhZC00YzhhLWEzZDUtMGM2NTE4MzQ4NGFmXkEyXkFqcGdeQWpybA@@._V1_QL75_UX500_CR0,0,500,281_.jpg",
+      "rating": 4.8,
+      "number_of_reviews": 200
+    },
+    {
+      "id": 3,
+      "title": "The Office",
+      "streaming_service": "Netflix",
+      "number_of_seasons": 9,
+      "episodes_per_season": 26,
+      "description": "A mockumentary on a group of typical office workers, where the workday consists of ego clashes, inappropriate behavior, and tedium.",
+      "category": "Comedy",
+      "image": "https://m.media-amazon.com/images/M/MV5BYTMyZGNjYTUtNzNhYS00MDM0LWJlNjktYTFhMmM3ZjE0ZDMxXkEyXkFqcGdeQXVyOTA3MTMyOTk@._V1_QL75_UX190_CR0,2,190,281_.jpg",
+      "rating": 4.7,
+      "number_of_reviews": 150
+    },
+    {
+      "id": 4,
+      "title": "The Crown",
+      "streaming_service": "Netflix",
+      "number_of_seasons": 4,
+      "episodes_per_season": 10,
+      "description": "Follows the political rivalries and romance of Queen Elizabeth II's reign and the events that shaped the second half of the 20th century.",
+      "category": "Drama",
+      "image": "https://m.media-amazon.com/images/M/MV5BYTMyZGNjYTUtNzNhYS00MDM0LWJlNjktYTFhMmM3ZjE0ZDMxXkEyXkFqcGdeQXVyOTA3MTMyOTk@._V1_QL75_UX190_CR0,2,190,281_.jpg",
+      "rating": 4.6,
+      "number_of_reviews": 120
+    },
+    {
+      "id": 5,
+      "title": "The Mandalorian",
+      "streaming_service": "Disney+",
+      "number_of_seasons": 2,
+      "episodes_per_season": 8,
+      "description": "The travels of a lone bounty hunter in the outer reaches of the galaxy, far from the authority of the New Republic.",
+      "category": "Action",
+      "image": "https://m.media-amazon.com/images/M/MV5BYTMyZGNjYTUtNzNhYS00MDM0LWJlNjktYTFhMmM3ZjE0ZDMxXkEyXkFqcGdeQXVyOTA3MTMyOTk@._V1_QL75_UX190_CR0,2,190,281_.jpg",
+      "rating": 4.9,
+      "number_of_reviews": 250
+    }
   ]
 }
