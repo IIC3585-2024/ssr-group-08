@@ -5,7 +5,7 @@ import { useFormState, useFormStatus } from "react-dom";
 import { useRouter } from "next/navigation";
 
 const initialState = {
-  message: "TESTING",
+  message: "",
 };
 
 export default function LoginForm() {
@@ -48,7 +48,6 @@ export default function LoginForm() {
 }
 
 function LoginButton() {
-  const router = useRouter();
   const { pending } = useFormStatus(login);
 
   const handleClick = (event) => {

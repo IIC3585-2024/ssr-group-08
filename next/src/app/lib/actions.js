@@ -21,22 +21,23 @@ export async function login(_currentState, formData) {
 }
 
 export async function signup(_currentState, formData) {
-  try {
-    await fetch("http://localhost:3001/users", {
-      method: "POST",
-      body: JSON.stringify(formData),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-    redirect("/login");
-  } catch (error) {
-    if (error) {
-      switch (error.type) {
-        default:
-          return "Ups, algo salió mal.";
-      }
-    }
-    throw error;
+  const body = {
+    first_name: formData.get("first-name"),
+    last_name: formData.get("last-name"),
+    email: formData.get("email"),
+    password: formData.get("password"),
+  };
+  const res = await fetch("http://localhost:3001/users", {
+    method: "POST",
+    body: JSON.stringify(body),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+  console.log("res", res);
+  if (res.ok) {
+    redirect("/auth/login");
+  } else {
+    redirect("/error");
   }
 }

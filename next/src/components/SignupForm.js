@@ -2,22 +2,26 @@
 
 import { signup } from "@/app/lib/actions";
 import { useFormState, useFormStatus } from "react-dom";
-import { useRouter } from "next/navigation";
+
+const initialState = {
+  message: "",
+};
 
 export default function LoginForm() {
-  const [errorMessage, dispatch] = useFormState(signup, undefined);
+  const [state, formAction] = useFormState(signup, initialState);
 
   return (
-    <form className="mt-8 space-y-6" action={dispatch}>
+    <form className="mt-8 space-y-6" action={formAction}>
       <div className="rounded-md shadow-sm -space-y-px">
         <div>
           <label htmlFor="first-name" className="sr-only">
             Primer nombre
           </label>
           <input
+            id="first-name"
             type="text"
-            name="email"
-            placeholder="First name address"
+            name="first-name"
+            placeholder="Primer nombre"
             required
             className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
           />
@@ -27,9 +31,10 @@ export default function LoginForm() {
             Primer apellido
           </label>
           <input
+            id="last-name"
             type="text"
-            name="email"
-            placeholder="Last name"
+            name="last-name"
+            placeholder="Primer apellido"
             required
             className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
           />
@@ -39,6 +44,7 @@ export default function LoginForm() {
             Correo electrónico
           </label>
           <input
+            id="email-address"
             type="email"
             name="email"
             placeholder="Email address"
@@ -51,6 +57,7 @@ export default function LoginForm() {
             Contraseña
           </label>
           <input
+            id="password"
             type="password"
             name="password"
             placeholder="Password"
@@ -58,7 +65,9 @@ export default function LoginForm() {
             className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
           />
         </div>
-        <div>{errorMessage && <p>{errorMessage}</p>}</div>
+        <p aria-live="polite" className="sr-only">
+          {state?.message}
+        </p>
       </div>
       <div>
         <SignupButton />
@@ -68,13 +77,11 @@ export default function LoginForm() {
 }
 
 function SignupButton() {
-  const router = useRouter();
   const { pending } = useFormStatus(signup);
 
   const handleClick = (event) => {
     if (pending) {
       event.preventDefault();
-      router.push("/auth/login");
     }
   };
 

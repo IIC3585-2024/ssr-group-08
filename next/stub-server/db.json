@@ -11,6 +11,27 @@
       "first_name": "Vicente",
       "last_name": "Cruz",
       "id": 2
+    },
+    {
+      "email": "vakel@uc.cl",
+      "password": "$2a$10$gYcVkCd42fF5T2ZInPM9mu2UvuLgdwpxZ..k3KObeHcdcKcvhYyNm",
+      "first_name": "Vicente",
+      "last_name": "Akel",
+      "id": 3
+    },
+    {
+      "email": "test1@uc.cl",
+      "password": "$2a$10$OP5IkENQuGeimXDffaa4yOwZRkYaGDg5EceT9pa.NBJ0CWPyINHou",
+      "first_name": "El",
+      "last_name": "Test",
+      "id": 4
+    },
+    {
+      "email": "gabriel.quiroz@uc.cl",
+      "password": "$2a$10$RwLIM6gXr.u0iEEsY.k8R.sNHepNpXXuQVshKoOkglyg24mKLg9.2",
+      "first_name": "Gabriel",
+      "last_name": "Quiroz",
+      "id": 5
     }
   ]
 }
