@@ -18,7 +18,7 @@ export default function LogoutButton() {
       href="/auth/login"
       onClick={handleClick}
     >
-      Logout
+      Cerrar Sesión
     </button>
   );
 }

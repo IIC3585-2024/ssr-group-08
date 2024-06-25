@@ -27,10 +27,10 @@ export default async function RootLayout({ children }) {
               {!isAuthenticated ? (
                 <>
                   <Link className="text-white ml-4" href="/auth/login">
-                    Login
+                    Inicio de Sesión
                   </Link>
                   <Link className="text-white ml-4" href="/auth/signup">
-                    Signup
+                    Registrarse
                   </Link>
                 </>
               ) : (
