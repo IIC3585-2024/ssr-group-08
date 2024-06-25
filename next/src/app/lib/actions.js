@@ -1,5 +1,6 @@
 "use server";
 import { redirect } from "next/navigation";
+import { cookies } from "next/headers";
 
 export async function login(_currentState, formData) {
   const body = {
@@ -14,6 +15,9 @@ export async function login(_currentState, formData) {
     },
   });
   if (res.ok) {
+    const data = await res.json();
+    const sessionData = data.accessToken;
+    cookies().set("session", sessionData);
     redirect("/");
   } else {
     redirect("/error");
@@ -40,4 +44,13 @@ export async function signup(_currentState, formData) {
   } else {
     redirect("/error");
   }
+}
+
+export async function logout() {
+  cookies().set("session", "");
+}
+
+export async function getSessionData() {
+  const sessionData = cookies().get("session")?.value;
+  return sessionData ? sessionData : null;
 }
