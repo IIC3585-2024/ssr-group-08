@@ -94,6 +94,18 @@
       "image": "https://m.media-amazon.com/images/M/MV5BYTMyZGNjYTUtNzNhYS00MDM0LWJlNjktYTFhMmM3ZjE0ZDMxXkEyXkFqcGdeQXVyOTA3MTMyOTk@._V1_QL75_UX190_CR0,2,190,281_.jpg",
       "rating": 2.9,
       "number_of_reviews": 250
+    },
+    {
+      "title": "Demon Slayer",
+      "streaming_service": "Netflix",
+      "number_of_seasons": "4",
+      "episodes_per_season": "8",
+      "description": "Mi anime favorito",
+      "category": "Acción",
+      "image": "https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/765ee047befcfb677d169f5de4c82d5c.jpe",
+      "rating": "4.1",
+      "number_of_reviews": "1",
+      "id": 6
     }
   ]
 }

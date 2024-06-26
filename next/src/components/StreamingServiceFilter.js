@@ -3,7 +3,14 @@
 import { useSearchParams, usePathname, useRouter } from "next/navigation";
 
 export default function StreamingServiceFilter() {
-  const services = ["Netflix", "Amazon Prime", "Hulu", "Disney+"];
+  const services = [
+    "Disney+",
+    "Netflix",
+    "Amazon Prime",
+    "Paramount+",
+    "Star+",
+    "HBO",
+  ];
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const { replace } = useRouter();

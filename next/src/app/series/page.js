@@ -5,6 +5,7 @@ import Search from "@/components/Search";
 import CategoryFilter from "@/components/CategoryFilter";
 import StreamingServiceFilter from "@/components/StreamingServiceFilter";
 import StarFilter from "@/components/StarFilter";
+import AddSeriesButton from "@/components/AddSeriesButton";
 
 export default async function Page({ searchParams }) {
   const session = await getSessionData();
@@ -38,10 +39,13 @@ export default async function Page({ searchParams }) {
         <Search placeholder="Buscar series..." />
 
         {isAuthenticated && (
-          <div className="flex justify-center gap-4 my-4">
-            <CategoryFilter />
-            <StreamingServiceFilter />
-            <StarFilter />
+          <div className="flex justify-between items-center gap-4 my-4">
+            <div className="flex gap-4">
+              <CategoryFilter />
+              <StreamingServiceFilter />
+              <StarFilter />
+            </div>
+            <AddSeriesButton />
           </div>
         )}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-4">
