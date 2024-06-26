@@ -1,4 +1,5 @@
 import { getSeries } from "@/app/lib/series/actions";
+import { getSessionData } from "../lib/auth/actions";
 import SeriesCard from "@/components/SeriesCard";
 import Search from "@/components/Search";
 import CategoryFilter from "@/components/CategoryFilter";
@@ -6,6 +7,9 @@ import StreamingServiceFilter from "@/components/StreamingServiceFilter";
 import StarFilter from "@/components/StarFilter";
 
 export default async function Page({ searchParams }) {
+  const session = await getSessionData();
+  const isAuthenticated = !!session;
+
   const query = searchParams?.query || "";
   const category = searchParams?.category || "";
   const service = searchParams?.service || "";
@@ -32,11 +36,14 @@ export default async function Page({ searchParams }) {
           Series Recomendadas
         </h1>
         <Search placeholder="Buscar series..." />
-        <div className="flex justify-center gap-4 my-4">
-          <CategoryFilter />
-          <StreamingServiceFilter />
-          <StarFilter />
-        </div>
+
+        {isAuthenticated && (
+          <div className="flex justify-center gap-4 my-4">
+            <CategoryFilter />
+            <StreamingServiceFilter />
+            <StarFilter />
+          </div>
+        )}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-4">
           {filteredSeries.map((series) => (
             <SeriesCard key={series.id} series={series} />
