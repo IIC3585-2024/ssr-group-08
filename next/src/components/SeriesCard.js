@@ -12,7 +12,7 @@ export default function SeriesCard({ series }) {
         <h3 className="text-xl font-semibold text-white">{series.title}</h3>
         <p className="text-gray-400">{series.streaming_service}</p>
         <p className="text-gray-400">{series.category}</p>
-        <p className="text-yellow-400">
+        <p className="text-yellow-400 mb-4">
           {series.rating} ({series.number_of_reviews})
         </p>
         <Link
