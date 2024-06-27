@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Proyecto de Recomendaciones de Series
 
-## Getting Started
+## Descripción del Proyecto
 
-First, run the development server:
+Este proyecto tiene como objetivo experimentar con frameworks que soportan tanto CSR como SSR a través del desarrollo de una aplicación web relativamente sencilla. La aplicación permite a los usuarios compartir y recomendar series disponibles en servicios de streaming.
+
+## Funcionalidades Implementadas
+
+- **Autenticación**: Los usuarios pueden registrarse e iniciar sesión utilizando `AuthJSON Server`.
+- **CRUD de Series**: Los usuarios pueden agregar nuevas series, pedir recomendaciones por categoría, servicio de streaming, y número mínimo de estrellas.
+- **Comentarios y Calificaciones**: Los usuarios pueden agregar comentarios y calificaciones a las series.
+- **Reactividad**: Aunque la aplicación no se actualiza en tiempo real al agregar nuevos datos, se puede actualizar la página para ver los cambios.  
+  Para pedir recomendaciones por categoría, servicio, número mínimo de estrellas a través de los filtros, agregar nuevas series y agregar comentarios y rating es necesario que el usuario haya iniciado sesión
+
+## Configuración del Proyecto
+
+### 1. Instalar Dependencias
+
+Asegúrate de estar en la carpeta raíz del proyecto y luego instala las dependencias para `next` y `StubServer`.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+cd next
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Iniciar el JSON Server y AuthJSON Server
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+JSON Server y AuthJSON Server se utilizan para simular un backend. Corre el siguiente comando para iniciar el servidor en el puerto 3001:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+`npm run json-server`
 
-## Learn More
+Esto levantará un servidor que utiliza db.json como base de datos. Asegúrate de detener y reiniciar este servidor cada vez que modifiques db.
+json manualmente.
 
-To learn more about Next.js, take a look at the following resources:
+3. Iniciar el Proyecto Next.js
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+cd next
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Esto levantará el frontend en el puerto 3000 y se conectará al backend en el puerto 3001.
 
-## Deploy on Vercel
+Detalles de Implementación
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    •	Server Components: Utilizados en la mayoría de las vistas para aprovechar SSR.
+    •	Client Components: Utilizados principalmente en formularios, excepto en el login y signup que también son SSR.
+    •	Autenticación: Implementada usando cookies para almacenar un token que contiene solo el ID del usuario por simplicidad.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Notas Importantes
+
+    •	Cada vez que se agregan nuevos datos, la página debe actualizarse manualmente para reflejar los cambios.
+    •	La base de datos inicial se encuentra en StubServer/db.json y puede ser modificada manualmente. Después de cualquier modificación, el servidor debe ser reiniciado.
+    •	La autenticación es simplificada y solo utiliza el ID del usuario en el token.
+
+Con estos pasos y notas, podrás configurar y correr el proyecto de recomendaciones de series, experimentando tanto con CSR como con SSR.
