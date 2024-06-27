@@ -36,28 +36,16 @@
   ],
   "series": [
     {
-      "id": 1,
       "title": "Billions",
       "streaming_service": "Netflix",
       "number_of_seasons": 5,
       "episodes_per_season": 60,
-      "description": "Un drama complejo sobre la política de poder en el mundo de las altas finanzas de Nueva York.",
+      "description": "A complex drama about power politics in the world of New York high finance.",
       "category": "Drama",
       "image": "https://m.media-amazon.com/images/M/MV5BYTMyZGNjYTUtNzNhYS00MDM0LWJlNjktYTFhMmM3ZjE0ZDMxXkEyXkFqcGdeQXVyOTA3MTMyOTk@._V1_QL75_UX190_CR0,2,190,281_.jpg",
-      "rating": 4.5,
-      "number_of_reviews": 100
-    },
-    {
-      "id": 2,
-      "title": "Breaking Bad",
-      "streaming_service": "Netflix",
-      "number_of_seasons": 5,
-      "episodes_per_season": 62,
-      "description": "Un profesor de química de secundaria convertido en fabricante de metanfetaminas se asocia con un antiguo estudiante para asegurar el futuro de su familia.",
-      "category": "Drama",
-      "image": "https://m.media-amazon.com/images/M/MV5BMTJiMzgwZTktYzZhZC00YzhhLWEzZDUtMGM2NTE4MzQ4NGFmXkEyXkFqcGdeQWpybA@@._V1_QL75_UX500_CR0,0,500,281_.jpg",
-      "rating": 4.8,
-      "number_of_reviews": 200
+      "rating": "3.5",
+      "number_of_reviews": 10211,
+      "id": 1
     },
     {
       "id": 3,
@@ -68,8 +56,8 @@
       "description": "Un falso documental sobre un grupo de empleados de oficina típicos, donde el día de trabajo consiste en conflictos de ego, comportamiento inapropiado y tedio.",
       "category": "Comedia",
       "image": "https://m.media-amazon.com/images/M/MV5BYTMyZGNjYTUtNzNhYS00MDM0LWJlNjktYTFhMmM3ZjE0ZDMxXkEyXkFqcGdeQXVyOTA3MTMyOTk@._V1_QL75_UX190_CR0,2,190,281_.jpg",
-      "rating": 4.7,
-      "number_of_reviews": 150
+      "rating": "4.7",
+      "number_of_reviews": 151
     },
     {
       "id": 4,
@@ -132,6 +120,18 @@
       "user_id": 5,
       "series_id": 1,
       "comment": "Muy buena"
+    },
+    {
+      "user_id": 2,
+      "series_id": 1,
+      "comment": "Encuentro q es buena serie pero no tan buena serie",
+      "id": 5
+    },
+    {
+      "user_id": 2,
+      "series_id": 3,
+      "comment": "Buena peli",
+      "id": 6
     }
   ]
 }

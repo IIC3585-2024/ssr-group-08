@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import { getSeries } from "@/app/lib/series/actions";
 import { getSessionData } from "@/app/lib/auth/actions";
 import Comments from "@/components/Comments";
+import AddCommentForm from "@/components/AddCommentForm";
 
 export default async function SeriesDetail({ params }) {
   const session = await getSessionData();
@@ -61,9 +62,12 @@ export default async function SeriesDetail({ params }) {
             <h2 className="text-2xl font-bold text-white mb-4">
               Agregar Comentario y Calificación
             </h2>
-            <p className="text-gray-400">
-              Formulario para agregar comentario y calificación próximamente.
-            </p>
+            <AddCommentForm
+              userId={session}
+              series={series}
+              currentRating={series.rating}
+              currentNumberOfReviews={series.number_of_reviews}
+            />
           </div>
         )}
       </div>
