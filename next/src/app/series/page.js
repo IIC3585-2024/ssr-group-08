@@ -9,6 +9,7 @@ import AddSeriesButton from "@/components/AddSeriesButton";
 
 export default async function Page({ searchParams }) {
   const session = await getSessionData();
+  console.log("session", session);
   const isAuthenticated = !!session;
 
   const query = searchParams?.query || "";

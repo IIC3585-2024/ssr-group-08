@@ -1,8 +1,8 @@
-// layout.js
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import { getSessionData } from "./lib/auth/actions";
+import { getUser } from "./lib/auth/actions";
 import LogoutButton from "@/components/LogoutButton";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -15,6 +15,11 @@ export const metadata = {
 export default async function RootLayout({ children }) {
   const session = await getSessionData();
   const isAuthenticated = !!session;
+
+  let user = null;
+  if (isAuthenticated) {
+    user = await getUser(session);
+  }
 
   return (
     <html lang="es">
@@ -29,8 +34,17 @@ export default async function RootLayout({ children }) {
                 Series
               </Link>
             </div>
-            <div>
-              {!isAuthenticated ? (
+            <div className="flex items-center space-x-4">
+              {isAuthenticated ? (
+                <>
+                  <span className="text-white">
+                    {user
+                      ? `${user.first_name} ${user.last_name}`
+                      : "Cargando..."}
+                  </span>
+                  <LogoutButton />
+                </>
+              ) : (
                 <>
                   <Link className="text-white ml-4" href="/auth/login">
                     Inicio de Sesión
@@ -39,8 +53,6 @@ export default async function RootLayout({ children }) {
                     Registrarse
                   </Link>
                 </>
-              ) : (
-                <LogoutButton />
               )}
             </div>
           </div>

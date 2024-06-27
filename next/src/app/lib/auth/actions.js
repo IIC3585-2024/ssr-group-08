@@ -16,8 +16,9 @@ export async function login(_currentState, formData) {
   });
   if (res.ok) {
     const data = await res.json();
-    const sessionData = data.accessToken;
+    const sessionData = data.user.id;
     cookies().set("session", sessionData);
+    // cookies().set("session", JSON.stringify(data));
     redirect("/");
   } else {
     redirect("/error");
