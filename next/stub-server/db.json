@@ -107,5 +107,31 @@
       "number_of_reviews": "1",
       "id": 6
     }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "user_id": 2,
+      "series_id": 1,
+      "comment": "Me encanta"
+    },
+    {
+      "id": 2,
+      "user_id": 3,
+      "series_id": 1,
+      "comment": "Muy buena serie"
+    },
+    {
+      "id": 3,
+      "user_id": 4,
+      "series_id": 1,
+      "comment": "No me gustó"
+    },
+    {
+      "id": 4,
+      "user_id": 5,
+      "series_id": 1,
+      "comment": "Muy buena"
+    }
   ]
 }

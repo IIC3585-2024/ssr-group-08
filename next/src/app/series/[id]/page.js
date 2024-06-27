@@ -1,5 +1,7 @@
+import { Suspense } from "react";
 import { getSeries } from "@/app/lib/series/actions";
 import { getSessionData } from "@/app/lib/auth/actions";
+import Comments from "@/components/Comments";
 
 export default async function SeriesDetail({ params }) {
   const session = await getSessionData();
@@ -49,6 +51,11 @@ export default async function SeriesDetail({ params }) {
             </p>
           </div>
         </div>
+        <Suspense
+          fallback={<div className="text-white">Cargando comentarios...</div>}
+        >
+          <Comments seriesId={series.id} />
+        </Suspense>
         {isAuthenticated && (
           <div className="bg-gray-800 p-4 rounded-lg shadow-md overflow-hidden mt-4">
             <h2 className="text-2xl font-bold text-white mb-4">

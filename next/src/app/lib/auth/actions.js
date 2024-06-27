@@ -54,3 +54,8 @@ export async function getSessionData() {
   const sessionData = cookies().get("session")?.value;
   return sessionData ? sessionData : null;
 }
+
+export async function getUser(userId) {
+  const res = await fetch(`http://localhost:3001/users/${userId}`);
+  return res.json();
+}

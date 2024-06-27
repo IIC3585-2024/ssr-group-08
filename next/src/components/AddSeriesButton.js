@@ -3,7 +3,7 @@
 import { useState } from "react";
 import AddSeriesForm from "@/components/AddSeriesForm";
 
-export default function AddSeriesButton({ createSeries }) {
+export default function AddSeriesButton() {
   const [showForm, setShowForm] = useState(false);
 
   return (
@@ -14,12 +14,7 @@ export default function AddSeriesButton({ createSeries }) {
       >
         Recomendar serie nueva
       </button>
-      {showForm && (
-        <AddSeriesForm
-          closeForm={() => setShowForm(false)}
-          createSeries={createSeries}
-        />
-      )}
+      {showForm && <AddSeriesForm closeForm={() => setShowForm(false)} />}
     </>
   );
 }
