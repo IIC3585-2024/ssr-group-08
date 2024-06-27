@@ -32,6 +32,13 @@
       "first_name": "Gabriel",
       "last_name": "Quiroz",
       "id": 5
+    },
+    {
+      "email": "josetrebolledo@gmail.com",
+      "password": "$2a$10$qF.5J90WLdLo59jqyyuPAu1inxCSAM5WjH91j6NatmhU0HoWKjpJS",
+      "first_name": "José",
+      "last_name": "Rebolledo",
+      "id": 6
     }
   ],
   "series": [
@@ -44,7 +51,7 @@
       "category": "Drama",
       "image": "https://m.media-amazon.com/images/M/MV5BYTMyZGNjYTUtNzNhYS00MDM0LWJlNjktYTFhMmM3ZjE0ZDMxXkEyXkFqcGdeQXVyOTA3MTMyOTk@._V1_QL75_UX190_CR0,2,190,281_.jpg",
       "rating": "3.5",
-      "number_of_reviews": 10211,
+      "number_of_reviews": 10212,
       "id": 1
     },
     {
@@ -94,6 +101,18 @@
       "rating": "4.1",
       "number_of_reviews": "1",
       "id": 6
+    },
+    {
+      "title": "The Reedeem Team",
+      "streaming_service": "Netflix",
+      "number_of_seasons": "1",
+      "episodes_per_season": "1",
+      "description": "After their shocking performance at the 2004 Olympics, the US men's basketball team seeks redemption as they pursue Gold at the 2008 Beijing Games. Watch all you want. Kobe Bryant, LeBron James, Dwyane Wade, Carmelo Anthony, Carlos Boozer, Mike Krzyzewski and more appear in this film.",
+      "category": "Drama",
+      "image": "https://media.tenor.com/fX-jbC8CNNwAAAAM/meme-black.gif",
+      "rating": "5",
+      "number_of_reviews": 1,
+      "id": 7
     }
   ],
   "comments": [
@@ -132,6 +151,12 @@
       "series_id": 3,
       "comment": "Buena peli",
       "id": 6
+    },
+    {
+      "user_id": 6,
+      "series_id": 1,
+      "comment": "wea mala",
+      "id": 7
     }
   ]
 }
